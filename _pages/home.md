@@ -9,12 +9,12 @@ header:
       url: "/files/resume.pdf"
 excerpt: >
   Becoming a computer architect.<br />
-  <small><a href="https://www.google.com">Just for fun</a></small>
+  <small><a href="https://www.4399.com">Just for fun</a></small>
 feature_row:
   - image_path: /assets/images/port1-r10k.png
     alt: "OoO Processor"
     title: "2-way Out-of-Order Processor Design"
-    excerpt: "We successfully implemented a MIPS R10K-style 2-way superscalar out-of-order processor with a ​clock period of 10.5 ns and an average ​CPI of 1.76​."
+    excerpt: "We successfully implemented a MIPS R10K-style 2-way superscalar out-of-order processor with a ​clock period of 10.5 ns and an average ​CPI of 1.76​"
     url: "/assets/files/N-way-superscalar_group6f19.pdf"
     btn_class: "btn--primary"
     btn_label: "Learn more"
@@ -33,5 +33,9 @@ feature_row:
     btn_class: "btn--primary"
     btn_label: "Help me"      
 ---
-## News
+**News**
+
+*This site is still under construction. Getting into nowhere via any links in my website is a* **FEATURE**  *, not a bug.* 
+
+*-- hxzhu*
 {% include feature_row %}
