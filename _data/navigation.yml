@@ -7,5 +7,5 @@ main:
     url: /about/
   - title: "Posts"
     url: /year-archive/
-  - title: "Welcome"
-    url: /
+  - title: "Test"
+    url: /test/
