@@ -21,7 +21,7 @@ feature_row:
   - image_path: /assets/images/port2-ac.png
     alt: "也不知道放什么"
     title: "Working on Animal Crossing"
-    excerpt: "林花谢了春红，太匆匆，无奈朝来寒雨晚来风。"
+    excerpt: "林花谢了春红，太匆匆，无奈朝来寒雨晚来风。This is me visiting Enhao's island, who is a talented friend of mine."
     url: "/nowhere/"
     btn_class: "btn--primary"
     btn_label: "Learn more"
@@ -35,7 +35,7 @@ feature_row:
 ---
 **News**
 
-*This site is still under construction. Getting into nowhere via any links in my website is a* **FEATURE**  *, not a bug.* 
+*This site is still under construction. Getting nowhere via any links on my website is a* **FEATURE**  *, not a bug. (Including the syntax errors. I am trying my best to make sure that my grammar shown here is on the same (low) level of the design and coding of this website.)* 
 
 *-- hxzhu*
 {% include feature_row %}
