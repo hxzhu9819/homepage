@@ -1,8 +1,9 @@
 # main links
-# main links
 main:
   - title: "Education"
     url: /education/
+  - title: "Projects"
+    url: /projects/
   - title: "About"
     url: /about/
   - title: "Posts"

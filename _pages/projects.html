@@ -1,0 +1,193 @@
+---
+layout: archive
+title: "Projects"
+permalink: /projects/
+author_profile: true
+---
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Education</title>
+    </head>
+    <body>
+        <style type='text/css'>
+            body{
+                font-family:arial,"Microsoft YaHei",微软雅黑,宋体,Helvetica;
+                font-size:18px;
+            }
+            /*
+                div.content:
+                    provide the content div in the middle
+            */
+            /* body div.content{
+                width:800px;
+                margin:0 auto;
+                line-height:30px;
+            } */
+            /*
+                header wrapper
+            */
+            body div.header{
+                background-color:#2196F3;
+            }
+            body div.header > div.content{
+                padding:10px;
+            }
+            /*
+                footer1
+            */
+            body div.footer1{
+                margin-top:30px;
+                background-color:#64B5F6;
+            }
+            /*
+                footer2
+            */
+            body div.footer2{
+                background-color:#2196F3;
+            }
+            body div.footer > div.content{
+                padding:10px;
+            }
+            body div.footer1 > div.content{
+                padding:20px;
+                line-height:40px;
+                font-size:1.2em;
+            }
+            /*
+                utils css
+            */
+            div.white-text{
+                color:white;
+            }
+            div.content > div.title{
+                padding:20px 0;
+                border-top:1px silver solid;
+                margin-top:30px;
+                font-size:2em;
+                font-weight:bold;
+            }
+            body a{
+                text-decoration:none;
+            }
+            div.content ul{
+                list-style: disc inside none;
+            }
+            div.content ol{
+                list-style: none inside none;
+            }
+            div.content li{
+                line-height:30px;
+                padding-bottom:20px;
+            }
+            div.content div.float-right{
+                float:right;
+            }
+        </style>
+        <!-- research and education -->
+        <style type="text/css">
+            div.education{
+                margin-top: 40px;
+            }
+            div.research > ul > li > span.title,div.research > ul > li > div.time,
+            div.education > ul > li > span.title,div.education > ul > li > div.time,
+            div.pro > ul > li > span.title{
+                font-weight:bold;
+                font-size:1.1em;
+            }
+            div.research > ul > li > div.info,
+            div.education > ul > li > div.info,
+            div.pro > ul > li > div.info{
+                padding-left:20px;
+                padding-bottom: 8px;
+                word-wrap:break-word;
+                line-height:15px;
+                font-style: italic;
+                font-size: 17px;
+            }
+            div.research > ul > li > div.brief,
+            div.education > ul > li > div.brief,
+            div.pro > ul > li > div.brief{
+                padding-left:20px;
+                word-wrap:break-word;
+                font-size:16px;
+                line-height:25px;
+            }
+            div.float-right{
+                font-style: italic;
+                font-size: 17px;
+            }
+        </style>
+        <style>
+            p.content{                        
+                line-height:1.2em;    
+                margin:0px;
+            }
+            div.education > ul > li > img{
+                height: 70px;
+            }
+            img.pic1{
+                float:right; 
+                margin-left:20px;
+                
+            }
+        </style>
+        <div class="content research">
+        <h2>Research Experiences</h2>
+        <ul>
+            <li>
+                <span class="title">Object Detection for Autonomous Driving (Hitachi project)</span>
+                <div class="float-right">Sep 2019 - Present</div>
+                <div class="info">Researcher, the University of Michigan, Ann Arbor</a></div>
+                <div class="brief">Autonomous Driving requires reliable models and hardware that maximizes inference performances. This project explores the possibilities of using heteogeneous systems (GPU, TPU, CPU, FPGA, etc) to fulfill the demands. My efforts are focused on TPUs. I modified, quantized, and compiled MobileNetv1 in tflite, deployed them in edgeTPUs and profiled the inference performance.</div>    
+            </li>
+            <li>
+                <span class="title">Software Defined Hardware (DARPA project)</span>
+                <div class="float-right">May 2019 - Present</div>
+                <div class="info">Researcher, the University of Michigan, Ann Arbor</a></div>
+                <div class="brief">Designed test benches for TransPy, python library tailored for a reconfigurable processor. Reimplemented Naive Bayes SGD for sentiment analysis in C++, ran simulations, and tested the workflow with different configurations.</div>
+            </li>
+            <li>
+                <span class="title">Runtime Neural Pruning</span>
+                <div class="float-right">May 2019 - Jan 2020</div>
+                <div class="info">Researcher, the University of Michigan, Ann Arbor</a></div>
+                <div class="brief">Designed and implemented a prunable CNN framework with an RNN to dynamically prune neurons based on input complexity. Achieved ~ 5x speedup while maintaining an accuracy of ~90%.</div>
+            </li>
+            <li>
+                <span class="title">Accelerating Variant Calling for Genome Sequencing</span>
+                <div class="float-right">Jan 2019 - Sep 2019</div>
+                <div class="info">Researcher, the University of Michigan, Ann Arbor</a></div>
+                <div class="brief">Accelerated variant calling by making GATK multi-threaded and assigning PairHMM computations to FPGA. Developed a HOST-FPGA interface that dynamically adjusts the batch structure to minimize overheads and allows the HOST to control FPGAs in Java.</div>    
+            </li>
+        </ul>
+        <h2>Project Experiences</h2>
+        <ul>
+            <li>
+                <span class="title">R10K-style 2-way Superscalar Out-of-order Processor</span>
+                <div class="float-right">Sep 2019 - Dec 2019</div>
+                <div class="info">Developer, the University of Michigan, Ann Arbor</a></div>
+                <div class="brief">Accelerated variant calling by making GATK multi-threaded and assigning PairHMM computations to FPGA. Developed a HOST-FPGA interface that dynamically adjusts the batch structure to minimize overheads and allows the HOST to control FPGAs in Java.</div>    
+            </li>
+            <li>
+                <span class="title">Image Classification (Neural Network)</span>
+                <div class="float-right">Mar 2019 - May 2019</div>
+                <div class="info">Developer, the University of Michigan, Ann Arbor</a></div>
+                <div class="brief">Designed a DNN architecture to classify photos by monuments. Applied transfer learning (autoencoder) to augment classification abilities of the CNNs. Achieved an accuracy of 0.85 for a 10-category classification problem.</div>    
+            </li>
+            <li>
+                <span class="title">Smart Window</span>
+                <div class="float-right">Jan 2019 - May 2019</div>
+                <div class="info">Team Lead, the University of Michigan, Ann Arbor</a></div>
+                <div class="brief"> Built a gesture-controlled window with a touchscreen that can self-adjust the opening angle based on multiple weather indices. Converted and wrote C libraries for the touchscreen and the gesture sensor. Integrated peripherals to SmartFusion FPGA with APB3, SPI, and I2C interfaces, and implemented interrupt handlers to update data from sensors.</div>    
+            </li>
+            <li>
+                <span class="title">Airline Review Evaluation (Supervised Learning)</span>
+                <div class="float-right">Jan 2019 - Mar 2019</div>
+                <div class="info">Developer, the University of Michigan, Ann Arbor</a></div>
+                <div class="brief">Trained Linear/Quadratic-Kernel Support Vector Machines (SVM) to classify the sentiment of twitter reviews. Evaluated various hyperparameters and pre-processing methods with cross-validation.</div>    
+            </li>
+        </ul>
+        </div>
+  </body>
+</html>
