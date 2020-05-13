@@ -85,7 +85,7 @@ social:
 
 # Analytics
 analytics:
-  provider               : false # false (default), "google", "google-universal", "custom"
+  provider               : "google" # false (default), "google", "google-universal", "custom"
   google:
     tracking_id          :
     anonymize_ip         : # true, false (default)
@@ -95,7 +95,7 @@ analytics:
 author:
   name             : "Haoxuan"
   avatar           : "/assets/images/bio-photo.jpg"
-  bio              : "I am an **amazing** person."
+  bio              : "I am a **HW/SW** person looking for offers."
   location         : "Ann Arbor, MI"
   email            : "hxzhu@umich.edu"
   links:
