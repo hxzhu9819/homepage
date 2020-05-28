@@ -1,5 +1,5 @@
 ---
-title: "Last Semester in SJTU"
+title: "Going Home"
 tags:
     - life
 ---
