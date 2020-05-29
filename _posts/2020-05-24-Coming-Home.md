@@ -1,5 +1,6 @@
 ---
 title: "Going Home"
+toc: true
 tags:
     - life
 ---
