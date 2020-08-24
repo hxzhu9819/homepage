@@ -1,5 +1,6 @@
 ---
 title: "Last Semester in SJTU"
+lang: zh
 tags:
   - study
   - life

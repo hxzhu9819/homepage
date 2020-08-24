@@ -1,8 +1,10 @@
 ---
 title: "Going Home"
 toc: true
+lang: zh
 tags:
     - life
+classes: wide
 ---
 
 *归国之难，难于上青天*
