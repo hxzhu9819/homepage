@@ -28,14 +28,17 @@ feature_row:
   - image_path: /assets/images/port3-apple.png
     alt: "还是不知道放什么"
     title: "I join Apple as a Product System Quality Engineer Intern"
-    excerpt: "Hello, Apple!"
+    excerpt: "Hello, Apple! Finally! Due to COVID-19, my on-board date is delayed for one month. By the other hand, I got a chance to work on a project that will deliver things to our users."
     url: "/contact/"
     btn_class: "btn--primary"
     btn_label: "Learn more"      
 ---
-**News**
+<font size=5>News</font>
+**Aug 15, 2020** I graduated from Shanghai Jiao Tong University.
 
-*This site is still under construction. Getting nowhere via any links on my website is a* **FEATURE**  *, not a bug. (Including the syntax errors. I am trying my best to make sure that my grammar shown here is on the same (low) level of the design and coding of this website.)* 
 
-*-- hxzhu*
 {% include feature_row %}
+
+**Caveat**
+*This site is still under construction. Getting nowhere via any links on my website is a* **FEATURE**  *, not a bug. (Including the syntax errors. I am trying my best to make sure that my grammar shown here is on the same (low) level of the design and coding of this website.)* 
+*-- hxzhu*

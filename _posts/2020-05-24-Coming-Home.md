@@ -4,7 +4,6 @@ toc: true
 lang: zh
 tags:
     - life
-classes: wide
 ---
 
 *归国之难，难于上青天*
@@ -65,15 +64,13 @@ classes: wide
 
 然后时间来到了5月23号，还是上午9点，东航打来电话说能飞了，明天12:40，飞吗？（对他还是只提前一天通知你）改签好以后zsj就去租车了，我们就在家里收收尾扔扔垃圾拆拆家具准备出发。勤劳善良的zsj最后去DTW在Avis租了一辆MiniVan。然后我们最后聚了一聚熬到凌晨2点就正式出发去芝加哥。
 
-我跟ZSJ一人开一半。但说实话因为疫情，又是晚上，I94上几乎就我们这一辆车，从天黑开到天亮，从农村开到城市，不得不说其实还蛮奇妙的
+我跟ZSJ一人开一半。但说实话因为疫情，又是晚上，I94上几乎就我们这一辆车，从天黑开到天亮，从农村开到城市，不得不说其实还蛮奇妙的。
 
-![p-coming-home-darkroad](/homepage/assets/images/p-coming-home-darkroad.JPG)
+![p-coming-home-darkroad](/homepage/assets/images/2020-05-24-Coming-Home/p-coming-home-darkroad.JPG)
 
-![p-coming-home-minivan](/homepage/assets/images/p-coming-home-minivan.png)
+![p-coming-home-minivan](/homepage/assets/images/2020-05-24-Coming-Home/p-coming-home-minivan.png)
 
-*以下图片credit zsj*
-
-![p-coming-home-chicago](/homepage/assets/images/p-coming-home-chicago.JPG)
+![p-coming-home-chicago](/homepage/assets/images/2020-05-24-Coming-Home/p-coming-home-chicago.JPG)
 
 #### 准备值机
 
@@ -81,7 +78,7 @@ classes: wide
 
 原本以为提前一个小时到人不会很多，然后我们才发现我们太幼稚了。。。当时整个航站楼可能就三个航班，但是我们的值机柜台队伍几乎占满了整个候机大厅。
 
-![p-coming-home-queue](/homepage/assets/images/p-coming-home-queue.png)
+![p-coming-home-queue](/homepage/assets/images/2020-05-24-Coming-Home/p-coming-home-queue.png)
 
 排队的时候会有工作人员让你扫码，记得用微信扫，里面是海关旅客申报单，在获得座位号之后记得填写，在到达国内进行卫生检疫的时候会用到。如果想和同伴坐在一起的话还是可以跟柜台小哥哥/小姐姐说，他们会尽量满足。感觉可能就是觉得你们反正一直在一起，要么都没感染，要么全感染了。排完checkin大概11:00左右，安检花费40分钟左右，据说美国部分机场连出境的中国人都要盘问看聊天记录，虽然我们芝加哥没有，但防患未然还是准备一下比较好。然后就是等着上飞机了。这时候大家都开始穿防护服。我们几个觉得这天气穿防护服可能会影响体温，所以没穿，但口罩和手套还是务必全程戴着（我也不知道我们的做法对不对，但目前我们三个都是阴性。可能是运气好吧）
 
@@ -97,7 +94,7 @@ classes: wide
 
 降落之后，海关会进来再量一次体温，发两张表叫我们填写，然后把有异样的乘客提前带下飞机（去了哪儿不知道，但反正周围有不少救护车就对了），这个过程大概一个小时左右。下飞机也是一批一批下，之后又是漫长的排队准备进行第一轮卫生检疫。
 
-![p-coming-home-custom](/homepage/assets/images/p-coming-home-custom.png)
+![p-coming-home-custom](/homepage/assets/images/2020-05-24-Coming-Home/p-coming-home-custom.png)
 
 ##### 第一关：卫生检疫1
 
@@ -123,7 +120,7 @@ classes: wide
 
 出海关后就正式回国了。太原这边是随机分配宾馆的，而且宾馆也没有分档，也就是说并没有别的省市所谓的自己选择价位入住。这里需要身份证和护照，如果你跟我一样忘带身份证了，报身份证号一样没问题。这里全程录像。小姐姐在登记信息的时候其实已经决定了你去什么宾馆。机智聪慧的11m瞄到了宾馆列表，除了一个四星级的天水国际，别的都是散落在太原各地的锦江之星。填写好之后会稍作等待，之后五人一组被小姐姐/小哥哥带到外面的巴士里。
 
-![p-coming-home-staff](/homepage/assets/images/p-coming-home-staff.png)
+![p-coming-home-staff](/homepage/assets/images/2020-05-24-Coming-Home/p-coming-home-staff.png)
 
 至此，入境过程全部完成了。
 
@@ -133,7 +130,7 @@ classes: wide
 
  上巴士之后会有全副武装的领队老师跟车，她会发房间号（并不会发房间卡，因为本来就不允许出房间），然后让我们填写一个知情同意书（会回收），大意就是你可能是潜在感染者，我们隔离你是有法律依据的，你要配合哦
 
-![p-coming-home-paperwork](/homepage/assets/images/p-coming-home-paperwork.png)
+![p-coming-home-paperwork](/homepage/assets/images/2020-05-24-Coming-Home/p-coming-home-paperwork.png)
 
 大概等了半个小时后我们的巴士就在全程警车开道，警车护送的情况下出发了。第一次被夹在警车中间，可以说是非常霸气了。
 
