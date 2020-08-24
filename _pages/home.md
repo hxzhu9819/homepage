@@ -27,7 +27,7 @@ feature_row:
     btn_label: "Learn more"
   - image_path: /assets/images/port3-apple.png
     alt: "还是不知道放什么"
-    title: "I take the offer from Apple as a Product System Quality Engineer Intern"
+    title: "I join Apple as a Product System Quality Engineer Intern"
     excerpt: "Hello, Apple!"
     url: "/contact/"
     btn_class: "btn--primary"
