@@ -25,13 +25,13 @@ feature_row:
     url: "/nowhere/"
     btn_class: "btn--primary"
     btn_label: "Learn more"
-  - image_path: /assets/images/port3-roadsign.png
+  - image_path: /assets/images/port3-apple.png
     alt: "还是不知道放什么"
-    title: "CMU or Univ of MICH? Where's next?"
-    excerpt: "Which university suits me more?"
+    title: "I take the offer from Apple as a Product System Quality Engineer Intern"
+    excerpt: "Hello, Apple!"
     url: "/contact/"
     btn_class: "btn--primary"
-    btn_label: "Help me"      
+    btn_label: "Learn more"      
 ---
 **News**
 
