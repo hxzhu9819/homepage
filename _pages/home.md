@@ -28,7 +28,7 @@ feature_row:
   - image_path: /assets/images/port3-apple.png
     alt: "还是不知道放什么"
     title: "I join Apple as a Product System Quality Engineer Intern"
-    excerpt: "Hello, Apple! Finally! Due to COVID-19, my on-board date is delayed for one month. By the other hand, I got a chance to work on a project that will deliver things to our users."
+    excerpt: "Hello, Apple! Finally! Due to COVID-19, my on-board date was delayed for one month. But on the other hand, I got a chance to work on a project that will deliver things to our users."
     url: "/contact/"
     btn_class: "btn--primary"
     btn_label: "Learn more"      
