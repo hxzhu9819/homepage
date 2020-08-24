@@ -34,8 +34,9 @@ feature_row:
     btn_label: "Learn more"      
 ---
 <font size=5>News</font>
-**Aug 15, 2020** I graduated from Shanghai Jiao Tong University.
-
+**Aug 15, 2020** - I graduated from Shanghai Jiao Tong University.
+<br/>
+<br/>
 
 {% include feature_row %}
 
