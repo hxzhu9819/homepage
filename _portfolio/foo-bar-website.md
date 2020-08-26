@@ -1,30 +1,36 @@
 ---
-title: "Foo Bar Identity"
-excerpt: "Foo Bar design system including logo mark, website design, and branding applications."
+title: "Pudding Cattery"
+excerpt: "7-years of cat breeding experience."
+permalink: /pudding_test/
 header:
-  image: /assets/images/foo-bar-identity.jpg
-  teaser: /assets/images/foo-bar-identity-th.jpg
+  image: /assets/images/pudding/header.jpg
+  teaser: /assets/images/pudding/header-th.jpg
 sidebar:
-  - title: "Role"
+  - title: "张寅"
     image: http://placehold.it/350x250
     image_alt: "logo"
-    text: "Designer, Front-End Developer"
-  - title: "Responsibilities"
-    text: "Reuters try PR stupid commenters should isn't a business model"
+    text: "专业breeder，猫妈，心理学家"
+  - title: "地址"
+    text: "叶城路515号307绿地嘉尚国际广场"
+  - title: "联系方式"
+    text: "Phone: 137889315\nWechat: lnmz0721"
 gallery:
-  - url: /assets/images/unsplash-gallery-image-1.jpg
-    image_path: assets/images/unsplash-gallery-image-1-th.jpg
+  - url: /assets/images/pudding/cat_0.png
+    image_path: /assets/images/pudding/cat_0.png
     alt: "placeholder image 1"
-  - url: /assets/images/unsplash-gallery-image-2.jpg
-    image_path: assets/images/unsplash-gallery-image-2-th.jpg
+  - url: /assets/images/pudding/cat_1.png
+    image_path: /assets/images/pudding/cat_1.png
     alt: "placeholder image 2"
-  - url: /assets/images/unsplash-gallery-image-3.jpg
-    image_path: assets/images/unsplash-gallery-image-3-th.jpg
+  - url: /assets/images/pudding/cat_2.png
+    image_path: /assets/images/pudding/cat_2.png
     alt: "placeholder image 3"
 ---
 
-Pictures of Goats section West Seattle Blog dingbat newspaper rubber cement Google+ newsroom cafe news.me rubber cement, Ushahidi Kindle Single syndicated Instagram HuffPo community mthomps, Mozilla iPhone app should isn't a business model curmudgeon Snarkmarket Tim Carmody production of innocence. Fuego tweets community DocumentCloud metered model Gardening & War section YouTube social media SEO information overload analytics Aron Pilhofer Journal Register data visualization WikiLeaks Groupon, collaboration Steve Jobs we need a Nate Silver AP What Would Google Do the power of the press belongs to the person who owns one Clay Shirky curmudgeon Voice of San Diego free as in beer dead trees the notion of the public Lucius Nieman.
+CFA布丁猫舍成立于2013年，坐落于上海，是专业培育CFA宠物/赛级品种猫的优质猫舍。本舍张舍长人美歌甜，热心公益，温文尔雅，专业知识丰富。欢迎各位未来的猫爸猫妈莅临我舍看猫
+<font size=5>News</font>
+**Aug 24, 2020** - 黑哥去新家啦！<br/>
+**Aug 13, 2020** - 奶油（乳白）再次成为光荣妈妈为我舍诞下2子
 
-{% include gallery caption="This is a sample gallery to go along with this case study." %}
+{% include gallery caption="以上猫咪正在寻找新家" %}
 
-hackgate copyright Lucius Nieman CNN leaves it there right-sizing a giant stack of newspapers that you'll never read net neutrality algorithms RT algorithms TechCrunch 5% corruption, horse-race coverage Gardening & War section CTR try PR CPC David Cohn shoot a photo algorithms content is king Android Snarkmarket crowdfunding, Fuego Twitter topples dictators YouTube abundance WordPress Reuters try PR stupid commenters should isn't a business model bringing a tote bag to a knife fight.
+**Caveat:** This is not my property. I am trying to practice my skills in building a webpage as a project.
