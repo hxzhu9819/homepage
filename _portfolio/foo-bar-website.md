@@ -15,14 +15,14 @@ sidebar:
   - title: "联系方式"
     text: "Phone: 137889315\nWechat: lnmz0721"
 gallery:
-  - url: /assets/images/pudding/cat_0.png
-    image_path: /assets/images/pudding/cat_0.png
+  - url: /assets/images/pudding/cat_0.PNG
+    image_path: /assets/images/pudding/cat_0.PNG
     alt: "placeholder image 1"
-  - url: /assets/images/pudding/cat_1.png
-    image_path: /assets/images/pudding/cat_1.png
+  - url: /assets/images/pudding/cat_1.PNG
+    image_path: /assets/images/pudding/cat_1.PNG
     alt: "placeholder image 2"
-  - url: /assets/images/pudding/cat_2.png
-    image_path: /assets/images/pudding/cat_2.png
+  - url: /assets/images/pudding/cat_2.PNG
+    image_path: /assets/images/pudding/cat_2.PNG
     alt: "placeholder image 3"
 ---
 
