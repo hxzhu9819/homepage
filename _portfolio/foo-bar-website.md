@@ -13,7 +13,7 @@ sidebar:
   - title: "地址"
     text: "叶城路515号307绿地嘉尚国际广场"
   - title: "联系方式"
-    text: "Phone: 137889315\nWechat: lnmz0721"
+    text: "Phone: 137889315\n Wechat: lnmz0721"
 gallery:
   - url: /assets/images/pudding/cat_0.PNG
     image_path: /assets/images/pudding/cat_0.PNG

@@ -18,20 +18,20 @@ feature_row:
     url: "/assets/files/N-way-superscalar_group6f19.pdf"
     btn_class: "btn--primary"
     btn_label: "Learn more"
-  - image_path: /assets/images/port2-ac.png
-    alt: "也不知道放什么"
-    title: "Working on Animal Crossing"
-    excerpt: "林花谢了春红，太匆匆，无奈朝来寒雨晚来风。This is me visiting Enhao's island, who is a talented friend of mine."
-    url: "/nowhere/"
-    btn_class: "btn--primary"
-    btn_label: "Learn more"
   - image_path: /assets/images/port3-apple.png
     alt: "还是不知道放什么"
     title: "I join Apple as a Product System Quality Engineer Intern"
-    excerpt: "Hello, Apple! Finally! Due to COVID-19, my on-board date was delayed for one month. But on the other hand, I got a chance to work on a project that will deliver things to our users."
-    url: "/contact/"
+    excerpt: "Hello, Apple! Finally! Due to COVID-19, my on-board date was delayed for one month. But I got a chance to work on a product that will be delivered to our users."
+    url: "/nowhere/"
     btn_class: "btn--primary"
-    btn_label: "Learn more"      
+    btn_label: "Learn more"     
+  - image_path: /assets/images/port2-ac.png
+    alt: "也不知道放什么"
+    title: "Welcome home, Heige, the cuttest friend I have ever had"
+    excerpt: "After 22 years, I officially have my own furry friend. Come say hi to Heige. "
+    url: "/heige/"
+    btn_class: "btn--primary"
+    btn_label: "Learn more" 
 ---
 <font size=5>News</font>
 **Aug 15, 2020** - I graduated from Shanghai Jiao Tong University.
