@@ -10,5 +10,5 @@ main:
     url: /year-archive/
   - title: "TimeLine"
     url: /timeline/
-  - title: "Pudding"
-    url: /pudding_test/
+  # - title: "Pudding"
+  #   url: /pudding_test/
