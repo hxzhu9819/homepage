@@ -29,4 +29,4 @@ Total: 205.9RMB
 
 | Item                          | Effect                             | Cost   | Recommendation |
 |-------------------------------|------------------------------------|--------|----------------|
-|            |          |    |               |
+| Cat litter N1 * 3           | Literally, cat litter         | 109RMB   |  Testing             |
