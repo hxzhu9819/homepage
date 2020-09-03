@@ -15,7 +15,7 @@ feature_row:
     alt: "也不知道放什么"
     title: "Here we go, CMU, remotely from Shanghai"
     excerpt: "I just started my first semester at CMU remotely from Shanghai. It's quite a challange to do everything remotely. But check out my experience and thoughts."
-    url: "/posts/cmu/"
+    url: "/posts/cmu"
     btn_class: "btn--primary"
     btn_label: "Learn more" 
   - image_path: /assets/images/port3-apple.png
