@@ -5,8 +5,15 @@ toc: true
 tags:
   - life
 ---
+## Heige's Homepage
+We indeed are in the era of technology. Even a cat can make his own catpage in such a short time.<br>
+Portal: click [here](/homepage/heige/)!
 
-## Budget Monitor
+## Living with Cats
+~~My plan to train a model to write this blog is still ongoing...~~
+
+
+## Budget Tracker
 ### August, 2020
 
 | Item                          | Effect                             | Cost   | Recommendation |
