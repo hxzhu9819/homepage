@@ -5,7 +5,7 @@ title: "About"
 excerpt: " I have just graduated from UMICH."
 ---
 ### Brief Intro
-Haoxuan Zhu is currently interning at Apple. He received his B.S. in Computer Engineering as James B. Angell Scholar from the University of Michigan, Ann Arbor with summa cum laude and another B.S. in Electrical and Computer Engineering from Shanghai Jiao Tong University. During his undergraduate years, his has explored various field from designing out-of-order processors to developing applications for mobile devices. His research mainly focused on computer architecture and accelerating machine learning models with both hardware and software. He was supervised by Professor Trevor Mudge and helped test a series of domain-specific accelerators, including Transmuter and TPU. He also has a profound interest in machine learning related topics.
+Haoxuan Zhu is currently interning at Apple. He received his B.S. in Computer Engineering as James B. Angell Scholar from the University of Michigan, Ann Arbor with summa cum laude and another B.S. in Electrical and Computer Engineering from Shanghai Jiao Tong University. During his undergraduate years, he has explored various field from designing out-of-order processors to developing applications for mobile devices. His research mainly focused on computer architecture and accelerating machine learning models with both hardware and software. He was supervised by Professor Trevor Mudge and helped test a series of domain-specific accelerators, including Transmuter and TPU. He also has a profound interest in machine learning related topics.
 
 *Last updated: Aug 15, 2020*
 
