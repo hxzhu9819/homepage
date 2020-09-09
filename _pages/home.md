@@ -45,5 +45,5 @@ feature_row:
 [See Previous](/homepage/home_archive)
 
 **Caveat**
-*This site is still under construction. Getting nowhere via any links on my website is a* **FEATURE**  *, not a bug. (Including the syntax errors. I am trying my best to make sure that my grammar shown here is on the same (low) level of the design and coding of this website.)* 
+*This site is still under construction. Getting nowhere via any links on my website is a* **FEATURE**  *, not a bug.* 
 *-- hxzhu*

@@ -27,7 +27,7 @@ feature_row:
     btn_label: "Learn more"     
   - image_path: /assets/images/port2-ac.png
     alt: "也不知道放什么"
-    title: "Welcome home, Heige, the cuttest friend I have ever had"
+    title: "Welcome home, Heige, the cutest friend I have ever had"
     excerpt: "After 22 years, I officially have my own furry friend. Come say hi to Heige. "
     url: "/heige/"
     btn_class: "btn--primary"
