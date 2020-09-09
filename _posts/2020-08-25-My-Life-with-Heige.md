@@ -37,4 +37,8 @@ Total: 205.9RMB
 |-------------------------------|------------------------------------|--------|----------------|
 | Cat litter N1 * 3           | Literally, cat litter         | 109RMB   |  Testing             |
 | ACANA(爱肯拿)  5.4kg         | Literally, cat food         | 440RMB   |  Testing             |
+| Cat food storage box 6kg    | Keep cat food dry and clean | 36RMB   |  Testing             |
+| Pet disinfectant            | Kill germs around the house | 23RMB   |  Testing             |
+| Compound Dyclonine Ear Drop | In case Heige caught Otodectes cynotis| 40RMB   |  Testing   |
 
+Total: 648RMB
