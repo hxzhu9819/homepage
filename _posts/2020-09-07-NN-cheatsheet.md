@@ -24,3 +24,39 @@ $\bigtriangledown_{\textbf{v}} f = \bigtriangledown f \cdot \textbf{v}$
 
 #### Userful external links
 1. [Automatic differentiation](https://en.wikipedia.org/wiki/Automatic_differentiation#/Reverse_accumulation)
+
+## Autograd
+Before we dive in to Autograd, we need to understand the goal of **back propogation**.
+* backprop: measure how much each param affects the loss
+
+Autograd accomplishes the exact same thing as *forward* and *backprop*, but it adds code to forward propagation in order to automate backprop.
+
+### Forward Pass
+During forward propagation, autograd automatically constructs a **computational graph**. The computational graph tracks how elementary operations modify data throughout the function. Autograd does this in the background, while the function is being run.
+
+\[PLACEHOLDER: a computational graph\]
+
+#### Computational graph
+There are three types of nodes,
+* Constant Node
+* Accumulated Node
+* BackwardFunction
+
+Nodes are added whenever an operation occurs. In practice, we call `.apply()` method of the operation. Calling `apply()` on the subclass implicitly calls `Function.apply()`, which does the following:
+
+1. Create a node object for the operation’s output
+2. Run the operation on the input(s) to get an output tensor
+3. Store information on the node, which links it to the comp graph
+  3.1 link the output tensor with parent tensors. For each parent tensor
+    3.1.1 If the parent tensor has nodes, then add parent nodes to current node's *parent list*, and go to 4
+    3.1.2 If the parent tensor does not have nodes (`grad_fn` is None)
+      3.2.1 If the parent tensor `is_leaf=True `, `requires_grad=False`, then create a **Constant Node** for it, and append `None` to current node's *parent list*, and go to 4
+      3.2.2 If the parent tensor `is_leaf=True`, `requires_grad=True`, then create a ***Accumulated Node* for it, and append the parent tensor to the current node's *parent list*, and go to 4
+4. Store the node on the output tensor `grad_fn=BackwardFunction`
+5. Return the output tensor
+
+
+*Credits: CMU 11785 - Introduction to Deep Learning Fall 2020 HW1*
+
+### Userful external links
+1. [Autograd Explained](https://www.youtube.com/watch?v=MswxJw-8PvE&t=605s)
