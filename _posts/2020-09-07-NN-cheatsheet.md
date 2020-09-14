@@ -8,6 +8,7 @@ tags:
   - study
 ---
 ## Before we start
+**Still working on it. Big shout-out to those geniuses!**
 Neural Networks, nowadays, are like vehicles -- Anyone can operate them without knowing how they work. This post, for my best interest, and hopefully, will collect necessary informations and the concepts behind the scene if you truly want to build them from wheels.
 
 ## Mathematical Background
@@ -44,10 +45,9 @@ There are three types of nodes,
 
 Nodes are added whenever an operation occurs. In practice, we call `.apply()` method of the operation. Calling `apply()` on the subclass implicitly calls `Function.apply()`, which does the following:
 
-1. Create a node object for the operation’s output
+1. Create a node object for the operation’s output **BackwardFunction**
 2. Run the operation on the input(s) to get an output tensor
-3. Store information on the node, which links it to the comp graph
-  1. link the output tensor with parent tensors. For each parent tensor
+3. Store information on the node and links it to the comp graph by linking the output tensor with parent tensors. For each parent tensor
     1. If the parent tensor has nodes, then add parent nodes to current node's *parent list*, and go to 4
     2. If the parent tensor does not have nodes (`grad_fn` is None)
       1. If the parent tensor `is_leaf=True `, `requires_grad=False`, then create a **Constant Node** for it, and append `None` to current node's *parent list*, and go to 4
