@@ -47,11 +47,11 @@ Nodes are added whenever an operation occurs. In practice, we call `.apply()` me
 1. Create a node object for the operation’s output
 2. Run the operation on the input(s) to get an output tensor
 3. Store information on the node, which links it to the comp graph
-  3.1 link the output tensor with parent tensors. For each parent tensor
-    3.1.1 If the parent tensor has nodes, then add parent nodes to current node's *parent list*, and go to 4
-    3.1.2 If the parent tensor does not have nodes (`grad_fn` is None)
-      3.2.1 If the parent tensor `is_leaf=True `, `requires_grad=False`, then create a **Constant Node** for it, and append `None` to current node's *parent list*, and go to 4
-      3.2.2 If the parent tensor `is_leaf=True`, `requires_grad=True`, then create a ***Accumulated Node* for it, and append the parent tensor to the current node's *parent list*, and go to 4
+  1. link the output tensor with parent tensors. For each parent tensor
+    1. If the parent tensor has nodes, then add parent nodes to current node's *parent list*, and go to 4
+    2. If the parent tensor does not have nodes (`grad_fn` is None)
+      1. If the parent tensor `is_leaf=True `, `requires_grad=False`, then create a **Constant Node** for it, and append `None` to current node's *parent list*, and go to 4
+      2. If the parent tensor `is_leaf=True`, `requires_grad=True`, then create a **Accumulated Node** for it, and append the parent tensor to the current node's *parent list*, and go to 4
 4. Store the node on the output tensor `grad_fn=BackwardFunction`
 5. Return the output tensor
 
