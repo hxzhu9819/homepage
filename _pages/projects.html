@@ -72,7 +72,7 @@ author_profile: true
                 text-decoration:none;
             }
             div.content ul{
-                list-style: disc inside none;
+               list-style-type: none;
             }
             div.content ol{
                 list-style: none inside none;
@@ -91,15 +91,13 @@ author_profile: true
                 margin-top: 40px;
             }
             div.research > ul > li > span.title,div.research > ul > li > div.time,
-            div.education > ul > li > span.title,div.education > ul > li > div.time,
             div.pro > ul > li > span.title{
                 font-weight:bold;
                 font-size:1.1em;
             }
             div.research > ul > li > div.info,
-            div.education > ul > li > div.info,
             div.pro > ul > li > div.info{
-                padding-left:20px;
+                /* padding-left:20px; */
                 padding-bottom: 8px;
                 word-wrap:break-word;
                 line-height:15px;
@@ -107,9 +105,8 @@ author_profile: true
                 font-size: 17px;
             }
             div.research > ul > li > div.brief,
-            div.education > ul > li > div.brief,
             div.pro > ul > li > div.brief{
-                padding-left:20px;
+                /* padding-left:20px; */
                 word-wrap:break-word;
                 font-size:16px;
                 line-height:25px;
@@ -124,15 +121,13 @@ author_profile: true
                 line-height:1.2em;    
                 margin:0px;
             }
-            div.education > ul > li > img{
-                height: 70px;
-            }
             img.pic1{
                 float:right; 
                 margin-left:20px;
                 
             }
         </style>
+        
         <div class="content research">
         <h2>Research Experiences</h2>
         <ul>
@@ -167,40 +162,46 @@ author_profile: true
                 <span class="title">Salinity Map</span>
                 <div class="float-right">May 2020 - Aug 2020</div>
                 <div class="info">Developer, Shanghai Jiao Tong University</a></div>
-                <div class="brief">Developed a mobile (Android) application that shows water salinity information on the map. The app can auto-locate the position of the user, show the salinity level of the nearby water stations, highlight the best option, and show the optimised route to the chosen water station. After signning up, professional users can add/modify/delete salinity data. The interactive map also contains real-time weather information, including wind, current, temperature, etc. </div>
+                <div class="brief"> Developed a mobile (Android) application that shows water salinity information on the map. The app can auto-locate the position of the user, show the salinity level of the nearby water stations, highlight the best option, and show the optimised route to the chosen water station. After signning up, professional users can add/modify/delete salinity data. The interactive map also contains real-time weather information, including wind, current, temperature, etc. </div>
                 <div class="brief">Click <a href="/homepage/assets/files/2020/Salinity_Map/SalinityMap_keynote_Haoxuan.pdf">here</a> to review my keynote.</div>
                 <div class="brief">Click <a href="/homepage/assets/files/2020/Salinity_Map/SalinityMap_report_Haoxuan.pdf">here</a> to review the report.</div>
                 
             </li>
             <li>
+                <span class="title">Insta485</span>
+                <div class="float-right">Sep 2020 - Oct 2020</div>
+                <div class="info"> Developer, the University of Michigan, Ann Arbor</a></div>
+                <div class="brief">Developed an Instagram clone implemented with server-side and client-side dynamic pages. Wrote server-side code with REST API. Wrote a client application in JS that ran in the browser and made AJAX calls to the REST API.</div>
+            </li>
+            <li>
                 <span class="title">Disk Scheduler</span>
                 <div class="float-right">Jan 2020 - Feb 2019</div>
-                <div class="info">Developer, the University of Michigan, Ann Arbor</a></div>
+                <div class="info"> Developer, the University of Michigan, Ann Arbor</a></div>
                 <div class="brief">Implemented a concurrent program that issues and services disk requests. The program contains a specified number of requester threads to issue disk requests, and one service thread to service disk requests in SSTF order. This is a course project from EECS482 @ UMICH.</div>
             </li>
             <li>
                 <span class="title">R10K-style 2-way Superscalar Out-of-order Processor</span>
                 <div class="float-right">Sep 2019 - Dec 2019</div>
-                <div class="info">Developer, the University of Michigan, Ann Arbor</a></div>
+                <div class="info"> Developer, the University of Michigan, Ann Arbor</a></div>
                 <div class="brief">Designed, implemented, and tested a 2-way superscalar out-of-order processor with System Verilog. The clock period is 10.5ns and the average CPI is 1.76. </div>    
                 <div class="brief">Click <a href="/homepage/assets/files/N-way-superscalar_group6f19.pdf">here</a> to review the report.</div>   
             </li>
             <li>
                 <span class="title">Image Classification (Neural Network)</span>
                 <div class="float-right">Mar 2019 - May 2019</div>
-                <div class="info">Developer, the University of Michigan, Ann Arbor</a></div>
+                <div class="info"> Developer, the University of Michigan, Ann Arbor</a></div>
                 <div class="brief">Designed a DNN architecture to classify photos by monuments. Applied transfer learning (autoencoder) to augment classification abilities of the CNNs. Achieved an accuracy of 0.85 for a 10-category classification problem.</div>    
             </li>
             <li>
                 <span class="title">Smart Window</span>
                 <div class="float-right">Jan 2019 - May 2019</div>
-                <div class="info">Team Lead, the University of Michigan, Ann Arbor</a></div>
+                <div class="info"> Team Lead, the University of Michigan, Ann Arbor</a></div>
                 <div class="brief"> Built a gesture-controlled window with a touchscreen that can self-adjust the opening angle based on multiple weather indices. Converted and wrote C libraries for the touchscreen and the gesture sensor. Integrated peripherals to SmartFusion FPGA with APB3, SPI, and I2C interfaces, and implemented interrupt handlers to update data from sensors.</div>    
             </li>
             <li>
                 <span class="title">Airline Review Evaluation (Supervised Learning)</span>
                 <div class="float-right">Jan 2019 - Mar 2019</div>
-                <div class="info">Developer, the University of Michigan, Ann Arbor</a></div>
+                <div class="info"> Developer, the University of Michigan, Ann Arbor</a></div>
                 <div class="brief">Trained Linear/Quadratic-Kernel Support Vector Machines (SVM) to classify the sentiment of twitter reviews. Evaluated various hyperparameters and pre-processing methods with cross-validation.</div>    
             </li>
         </ul>
