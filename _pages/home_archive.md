@@ -13,7 +13,7 @@ excerpt: >
 feature_row:
   - image_path: /assets/images/port-cmu.png
     alt: "也不知道放什么"
-    title: "Here we go, CMU"
+    title: "Here we go, CMU, remotely from Shanghai"
     excerpt: "I just started my first semester at CMU remotely from Shanghai. It's quite a challange to do everything remotely. But check out my experience and thoughts."
     url: "/heige/"
     btn_class: "btn--primary"
@@ -35,7 +35,7 @@ feature_row:
   - image_path: /assets/images/port1-r10k.png
     alt: "OoO Processor"
     title: "2-way Out-of-Order Processor Design"
-    excerpt: "We successfully implemented a MIPS R10K-style 2-way superscalar out-of-order processor with a ​clock period of 10.5 ns and an average ​CPI of 1.76​"
+    excerpt: "We successfully implemented an MIPS R10K-style 2-way superscalar out-of-order processor with a ​clock period of 10.5 ns and an average ​CPI of 1.76​"
     url: "/assets/files/N-way-superscalar_group6f19.pdf"
     btn_class: "btn--primary"
     btn_label: "Learn more"
