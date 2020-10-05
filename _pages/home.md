@@ -36,6 +36,7 @@ feature_row:
 
 ---
 <font size=5>News</font><br>
+**Sep 30, 2020** - My internship in Apple finished. It has been a fruitful jouney. Big shout-out to Henry, Jason and Jimmy! <br>
 **Aug 31, 2020** - I attended my first lecture in CMU remotely from Shanghai.<br>
 **Aug 15, 2020** - I graduated from Shanghai Jiao Tong University.<br>
 <br/>

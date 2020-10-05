@@ -2,6 +2,7 @@
 title: "My life with Heige"
 lang: en
 toc: true
+permalink: /posts/heige/
 tags:
   - life
 ---
@@ -39,6 +40,17 @@ Total: 205.9RMB
 | ACANA(爱肯拿)  5.4kg         | Literally, cat food         | 440RMB   |  Testing             |
 | Cat food storage box 6kg    | Keep cat food dry and clean | 36RMB   |  Testing             |
 | Pet disinfectant            | Kill germs around the house | 23RMB   |  Testing             |
-| Compound Dyclonine Ear Drop | In case Heige caught Otodectes cynotis| 40RMB   |  Testing   |
+| Compound dyclonine ear drop | In case Heige caught Otodectes cynotis| 40RMB   |  Testing   |
 
 Total: 648RMB
+
+### October, 2020
+
+| Item                          | Effect                             | Cost   | Recommendation |
+|-------------------------------|------------------------------------|--------|----------------|
+| Food bowl (china) | Literally, food bowl | 20RMB   |  5   |
+| Cat fence | Avoid Heige from the plants | 97RMB   |  Testing   |
+| Large cat toilet | Literally, cat toilet | 60RMB   |  Testing   |
+| Cat vitamin | Literally, cat vitamin | 26RMB   |  Testing   |
+
+Total: 203RMB
