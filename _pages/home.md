@@ -21,7 +21,7 @@ feature_row:
   - image_path: /assets/images/port3-apple.png
     alt: "还是不知道放什么"
     title: "I joined Apple as a Product System Quality Engineer Intern"
-    excerpt: "I delivered my intern presentation to the management team on Sep 30. I am so proud of what we've accomplished in the 4 months. Looking forward to getting back."
+    excerpt: "I delivered my intern presentation to the management team on Sep 30. I am so proud of what we've accomplished in 4 months. Looking forward to getting back."
     # url: "/nowhere/"
     url: "https://www.apple.com/pro-display-xdr/"
     btn_class: "btn--primary"
