@@ -20,8 +20,8 @@ feature_row:
     btn_label: "Learn more" 
   - image_path: /assets/images/port3-apple.png
     alt: "还是不知道放什么"
-    title: "I join Apple as a Product System Quality Engineer Intern"
-    excerpt: "Hello, Apple! Finally! Due to COVID-19, my on-board date was delayed for one month. But I got a chance to work on a product that will be delivered to our users."
+    title: "I joined Apple as a Product System Quality Engineer Intern"
+    excerpt: ""Your effort makes impact." I delivered my intern presentation to the management team on Sep 30. I am so proud of what we've accomplished in the 4 months"
     # url: "/nowhere/"
     url: "https://www.apple.com/pro-display-xdr/"
     btn_class: "btn--primary"
