@@ -94,7 +94,7 @@ abstraction:   |         real block            |
 malloc's view: |header|payload+(padding)|footer|
 code's view:   |      block_t           |footer|  
 ```
-You can use the provided helper functions to move among header, payload, and footer
+You can use the provided helper functions to move among header, payload, and footer.
 
 **To be continues...**
 Since I have more dues coming, I will jump to the key points. I may update more background info when available.
