@@ -197,7 +197,7 @@ After a second look, we may find out that the footer for allocated blocks are us
     * header (wsize) `|size, prev_alloc, is_alloc|`
     * next   (wsize) 
     * prev   (wsize)
-    * padding
+    * (padding)
     * footer (wsize) `|size, prev_alloc, is_alloc|`
 * block ...
 * epilogue (wsize)
@@ -209,19 +209,27 @@ After a second look, we may find out that the footer for allocated blocks are us
 ### Miniblock Footer-removed Seg-list allocator
 Above this section, we assume the each block is at least 32B. But do we actually need that amount of spaces for any blocks? Can we reduce `min_block_size`?
 Well yes, you may see that the not all free blocks need to be recorded as a doubly linked-list. In old times when we have`16 <= size - asize < 32` in `split` function, we refuse to further split it, but this precondition is too tight. We can allow free blocks to have only 16 Bytes. In other words, we can further improve the allocator to have `min_block_size=16`. This can further reduce fragmentations.
+
+Still confused? Here comes an example:
+
+Say, `malloc(5)`, 
+* without Miniblock, we need to allocate max(roundup(5, dsize), min_block_size=32) = max(16, 32) = 32 bytes. We need 6 Bytes (1 for header and 5 for payload). Thus, 26 bytes are wasted. 
+* with Miniblock, we need to allocate max(roundup(5, dsize), min_block_size=16) = max(16, 16) = 16 bytes. We need 6 Bytes (1 for header and 5 for payload). Thus, 10 bytes are wasted.
+We just saved 16 Bytes for one malloc! That's AWESOME!
 * prologue (wsize)
-* block (32N)
-  * allocated block (32N)
+* block (16N)
+  * allocated block (16N)
     * header (wsize) `|size, prev_alloc, is_alloc|`
-    * payload (can be larger than 16N)
+    * payload (can be larger than 16N, and can be 8)
+    * (padding)
   * 16B free block (16)
     * header (wsize) `|size, prev_alloc, is_alloc|`
     * next   (wsize)
-  * Normal free block (32N)
+  * Normal free block (16N)
     * header (wsize) `|size, prev_alloc, is_alloc|`
     * next   (wsize)
     * prev   (wsize)
-    * padding
+    * (padding)
     * footer (wsize) `|size, prev_alloc, is_alloc|`
 * block ...
 * epilogue (wsize)
@@ -230,18 +238,19 @@ Well yes, you may see that the not all free blocks need to be recorded as a doub
 Instead of traversing the 16B_freeBlock free list to find out whether the previous block is a 16B freeBlock or not, why do not we mimic the "is_prev" method and use a bit in header to indicate whether the previous block is a 16B freeBlock or not?
 
 * prologue (wsize)
-* block (32N)
-  * allocated block (32N)
+* block (16N)
+  * allocated block (16N)
     * header (wsize) `|size, is_prev_16B_freeBlock, prev_alloc, is_alloc|`
-    * payload (can be larger than 16N)
+    * payload
+    * (padding)
   * 16B free block (16)
     * header (wsize) `|size, is_prev_16B_freeBlock, prev_alloc, is_alloc|`
     * next   (wsize)
-  * Normal free block (32N)
+  * Normal free block (16N)
     * header (wsize) `|size, is_prev_16B_freeBlock, prev_alloc, is_alloc|`
     * next   (wsize)
     * prev   (wsize)
-    * padding
+    * (padding)
     * footer (wsize) `|size, is_prev_16B_freeBlock, prev_alloc, is_alloc|`
 * block ...
 * epilogue (wsize)
