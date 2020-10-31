@@ -14,7 +14,7 @@ The malloc lab is, by far, the most challenging and rewarding lab that I've ever
 
 To be honest, after finishing the lab and looking back, it seems much less difficult than I first read the spec. So, do not be too panic. Following are my reflections on this lab. Feel free to refer to my post, but please hold yourself from conducting AIV. OK! Buckle up and let's get started!
 
-*Just shoot me an email if you find it useful, or you have suggestions. Your reaching out to me makes me feel less lonely in the world of challenging HW and assignments.*
+*Just shoot me an email if you find it useful, or if you have suggestions. Your reaching out makes me feel less lonely in the world of challenging HW and assignments.*
 
 ## Short Introduction
 The lab requires us to implement a **dynamic memory allocator**. In English, we need to implement `init`, `malloc`, `free`, `realloc` and `calloc` functions in C. We also need to implement a debug_func called `mm_checkheap`. So on the bright side, we only need to implement 6 functions! Easy, right? 
@@ -43,14 +43,14 @@ Heap: | prologue | free | d | free | free | e | e | e | ... | epilogue |
 Now, assuming byte-addressible, it's easy to explain what `a = malloc(2);` does:
 
 1. Go to the heap
-2. Find 5 consecutive free bytes in the heap (*this is wrong and I will explain why*)
+2. Find 2 consecutive free bytes in the heap (*this is wrong and I will explain why*)
 3. occupy it and let a point to the start of the chosen byte
 
 ```
 Heap: | prologue | free | d | a | a | e | e | e | ... | epilogue |
 ```
 
-Easy, right? However, this is the abstraction we made for the programmers. There are actually a lot things happening behind the scene. Do not believe me? Try answering the following questions
+Easy, right? However, this is the abstraction we made for the programmers. There are actually a lot of things happening behind the scene. Do not believe me? Try answering the following questions
 
 1. how should we tell whether a block is free or allocated? They are 0/1s, not free/a/b/c/d, ...
 2. how should we find free blocks?
@@ -111,7 +111,7 @@ Now comes the most important part! How should we align payload?
 
 **!!!Remember: we are aligning payloads, not headers!!!**.
 
-The answer is surpriseingly easy. The structure has automated it for us. There is nothing we need to explicitly do to preserve double alignment w.r.t. payload. Why?
+The answer is surpriseingly simple. The structure has automated it for us. There is nothing we need to explicitly do to preserve double alignment w.r.t. payload. Why?
 
 ```
           |<- double aligned place 0x...0    
@@ -127,7 +127,7 @@ The answer is surpriseingly easy. The structure has automated it for us. There i
 ```
 You can see that if all invariants are followed, headers are always at one word before double aligned place, and footer is always at double aligned place. 
 ```
-The only possible stuff in a double alinged double word:
+The only possible stuff in a double aligned double word:
 
    |<- double aligned place 0x...0    
    -----------
