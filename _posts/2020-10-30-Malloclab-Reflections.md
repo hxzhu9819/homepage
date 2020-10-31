@@ -186,7 +186,7 @@ Welcome to the actual coding part! From this section, I will organize the rest a
 ## Phase 2: Final submission
 
 ### Footer-removed Seg-list allocator
-After a second look, we may find out that the footer for allocated blocks are useless. In this way, we can hold larger payload in an allocated block.
+After a second look, we may find out that the footer for allocated blocks are useless. By removing it, we can hold larger payload in an allocated block.
 * prologue (wsize)
 * block (32N)
   * allocated block (32N)
