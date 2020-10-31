@@ -262,13 +262,13 @@ At this point, you can get >98. Great job! Cheers! But what is missing?
 
 
 ### Final Push: find_fit and structure optimization
-If you can not get full mark, then it's a good time to take a rest, and come back later.
+If you can not get full mark now, then it's a good time to take a rest, and come back later.
 
 OK, I assume you've taken plenty of rest. Let's continue.
 
-I am a fan of "find_first_fit" and "LIFO-list" because of it is absolute simplicity to implement. Pretty normal routine. But the ease to implement is currently backfiring. We should turn to a wiser yet not-that-too-complicated stragety. The very opposite is "find_best_fit", which requires traversing the whole list in worst case (O(N)), can we find a middle ground between them?
+I am a fan of "find_first_fit" and "LIFO-list" because of its absolute simplicity to be implemented. Pretty normal routine. But the ease to implement is currently backfiring. We should turn to a wiser yet not-that-too-complicated stragety. The very opposite is "find_best_fit", which requires traversing the whole list in worst case (O(N)). Can we find a middle ground between them?
 
-The answer is yes. Why do not we adopt "find_best-ish_fit"? or, why do not we do some sorting-ish when maintaining the free list?
+The answer is yes. Why do not we adopt "find_best-ish_fit"? or, why do not we do some sorting-ish while maintaining the free list?
 
 Yea, yea, that's right! Now you are guaranteed to have a full mark.
 
