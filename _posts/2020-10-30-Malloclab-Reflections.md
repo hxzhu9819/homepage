@@ -105,7 +105,9 @@ Since we are working on 64-bit machines, a word (`wsize`) is 8B, then double wor
 
 Now can you tell me how large the payload should be? It has to be divisible by `dsize` in order to achieve double alignment. Only in this way can the total block size (8+8+16N) be divisible by `dsize`. Hence, a side product is that the `min_block_size` for each block should be 32B.
 
-Now comes the most important part! How should we align payload? **!!!We are aligning payloads, not headers!!!**.
+Now comes the most important part! How should we align payload? 
+
+**!!!Remember: we are aligning payloads, not headers!!!**.
 
 The answer is surpriseingly easy. The structure has automated it for us. There is nothing we need to explicitly do to preserve double alignment w.r.t. payload. Why?
 
@@ -118,9 +120,23 @@ The answer is surpriseingly easy. The structure has automated it for us. There i
 -----------------------------------------------------------------------
                |<-- 0x...8
 * prol->prologue, h->header, p->payload, --> padding, f->footer, epil->epilogue
-
+* |    | -> word is 8 bytes
 ```
-You can see that if all invariants are followed, headers are always at one word before double aligned place, and footer is always at double aligned place. Hence, the payload is guaranteed to start at a double aligned place. It's so elegant that you do not need to do a thing...
+You can see that if all invariants are followed, headers are always at one word before double aligned place, and footer is always at double aligned place. 
+```
+The only possible stuff in a double alinged double word:
+
+|<- double aligned place 0x...0    
+-----------
+1. |prol| h  |
+2. | p  | p  |
+3. | f  | h  |
+4. | f  |epil|
+---------------------
+          |<-- 0x...8
+```
+
+Hence, the payload is guaranteed to start at a double aligned place. It's so elegant that you do not need to do a thing...
 
 ### Trick
 Remember that the size of block (not `block_t`) should be divisible by 16 (`dsize`)? This tells us that we can use the last four bits of the header/footer whatever we like. Now, can you understand the following helper functions?
@@ -149,7 +165,7 @@ static word_t pack(size_t size, bool alloc) {
 Since I have more dues coming, I will jump to the key points. I may update more background info when available.
 
 ## Phase 1: Checkpoint
-Welcome to the actual coding part! From this section, I will organize the rest according to how I developed. There are numerous other implmenetations for you to try out. So do not narrow down your minds.
+Welcome to the actual coding part! From this section, I will organize the rest according to how I developed. There are numerous other implmenetations for you to try out. So do not restrain your minds.
 
 ### Implicit-list with-coalesce allocator
 
