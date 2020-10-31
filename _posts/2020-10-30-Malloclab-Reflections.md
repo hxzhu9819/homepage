@@ -10,15 +10,17 @@ tags:
 # MallocLab - A lab from CMU 18-613
 
 ## Before we begin
-The malloc lab is, by far, the most challenging and rewarding lab that I've ever had in CMU18-613. The writeup is 25 pages long, and it took me 5 days to get full mark (100/100.) Mine implementation is not the best (KOPS=9443 and UTIL=74.2%), but it suffices to help me build a solid understanding on this matter. If you, by any chances, are working on the lab with a due date. My suggestion is to sit back, prepare to embrace seg_fault, and have fun. Oh, as always, start early! I finished it 11 days earlier than the due date. Unless you are a genius, do not wait till the last minute. But do not feel discouraged by above descriptions. To be honest, after finishing the lab and looking back, it seems much less difficult than I first read the spec. So, do not be too panic. Following are my reflections on this lab. Feel free to refer to my post, but please hold yourself from conducting AIV. OK! Buckle up and let's get started!
+The malloc lab is, by far, the most challenging and rewarding lab that I've ever had in CMU18-613. The writeup is 25 pages long, and it took me 5 days to get full mark (100/100.) Mine implementation is not the best (KOPS=9443 and UTIL=74.2%), but it suffices to help me build a solid understanding on this matter. If you, by any chances, are working on the lab with a due date. My suggestion is to sit back, prepare to embrace seg_fault, and have fun. Oh, as always, start early! I finished it 11 days earlier than the due date. Unless you are a genius, do not wait till the last minute. But do not feel discouraged by above descriptions. 
+
+To be honest, after finishing the lab and looking back, it seems much less difficult than I first read the spec. So, do not be too panic. Following are my reflections on this lab. Feel free to refer to my post, but please hold yourself from conducting AIV. OK! Buckle up and let's get started!
 
 ## Short Introduction
 The lab requires us to implement a **dynamic memory allocator**. In English, we need to implement `init`, `malloc`, `free`, `realloc` and `calloc` functions in C. We also need to implement a debug_func called `mm_checkheap`. So on the bright side, we only need to implement 6 functions! Easy, right? 
-~right your head right~. If you are not familiar with linux malloc, my advice for you is to read the manual `man malloc` before you start.
+~~right your head right~~. If you are not familiar with linux malloc, my advice for you is to read the manual `man malloc` before you start.
 
 Also, the lab comes with 2 pages of programming rules. Read through them line by line to avoid rewriting your implementation. For your convenience, I've summarized them,
 
-1. Your allocator must not explicitly detect which traces are running. ~(but you can write an adaptive allocator if you have time.)~
+1. Your allocator must not explicitly detect which traces are running. ~~(but you can write an adaptive allocator if you have time.)~~
 2. You should not change the interface of `mm.h`
 3. global data should sum to at most 128 bytes
 4. You should not write macros that has parameters. eg, `#define GET(p) (*(unsigned int *)(p))`
@@ -60,14 +62,6 @@ Hence, in addition to the spaces that the programmer requests [*payload*], we ac
 
 In English, `malloc` is not only a waiter/waitress, it is also a manager.
 
-### Terms I prefer
-* block
-  * free block
-  * allocated block
-* overhead
-  * header
-  * footer
-
 ### Implicit-list no-coalesce allocator
 I strongly recommend you to understand the provided implicit-list no-coalesce allocator. Implicit list connects and organizes all blocks and stores information about them in a structured way, typically implemented as a **singly linked list**. To fulfill it, the structure of each component is
 
@@ -75,8 +69,8 @@ I strongly recommend you to understand the provided implicit-list no-coalesce al
   * free block       `|header|padding|footer|`
   * allocated block  `|header|payload|(padding)|footer|`
 * overhead
-  * header(wsize)          `|size|is_alloc|`
-  * footer(wsize)           `|size|is_alloc|`
+  * header          `|size, is_alloc|`
+  * footer           `|size, is_alloc|`
 
 The actually implementaion in the code is a little bit different,
 
@@ -92,18 +86,73 @@ You may tell that footer excluded form the `struct block`. Hence, the real game 
 ```
 abstraction:   |         real block            |
 malloc's view: |header|payload+(padding)|footer|
-code's view:   |      block_t           |footer|  
+code's view:   |         block_t        |footer|  
 ```
 You can use the provided helper functions to move among header, payload, and footer.
 
-**To be continues...**
+### Double-word alignment
+This is one of my first obstacles. What does double-word alignment mean? 
+
+Since we are working on 64-bit machines, a word (`wsize`) is 8B, then double word (`dsize`) is 16B. Hence, the pointer to each payload should be divisible by 16 (4'b10000). Now let's add the size of each component,
+
+* prologue (wsize)
+* block (??)
+  * header (wsize)          `|size, is_alloc|`
+  * payload/padding/payload+padding (??)
+  * footer (wsize)           `|size, is_alloc|`
+* block ...
+* epilogue (wsize)
+
+Now can you tell me how large the payload should be? It has to be divisible by `dsize` in order to achieve double alignment. Only in this way can the total block size (8+8+16N) be divisible by `dsize`. Hence, a side product is that the `min_block_size` for each block should be 32B.
+
+Now comes the most important part! How should we align payload? **!!!We are aligning payloads, not headers!!!**.
+
+The answer is surpriseingly easy. The structure has automated it for us. There is nothing we need to explicitly do to preserve double alignment w.r.t. payload. Why?
+
+```
+          |<- double aligned place 0x...0    
+-----------------------------------------------------------------------
+|         |         |         |         |         |         |         |
+|prol| h  | p  | p  | p  | p  | f  | h  | p  | p  | -  | -  | f  |epil|
+|         |         |         |         |         |         |         |
+-----------------------------------------------------------------------
+               |<-- 0x...8
+* prol->prologue, h->header, p->payload, --> padding, f->footer, epil->epilogue
+
+```
+You can see that if all invariants are followed, headers are always at one word before double aligned place, and footer is always at double aligned place. Hence, the payload is guaranteed to start at a double aligned place. It's so elegant that you do not need to do a thing...
+
+### Trick
+Remember that the size of block (not `block_t`) should be divisible by 16 (`dsize`)? This tells us that we can use the last four bits of the header/footer whatever we like. Now, can you understand the following helper functions?
+```c
+static const word_t alloc_mask = 0x1;
+static const word_t size_mask = ~(word_t)0xF;
+
+static size_t extract_size(word_t word) {
+    return (word & size_mask);
+}
+
+static bool extract_alloc(word_t word) {
+    return (bool)(word & alloc_mask);
+}
+
+static word_t pack(size_t size, bool alloc) {
+    word_t word = size;
+    if (alloc) {
+        word |= alloc_mask;
+    }
+    return word;
+}
+```
+
+**To be continued...**
 Since I have more dues coming, I will jump to the key points. I may update more background info when available.
 
 ## Phase 1: Checkpoint
 Welcome to the actual coding part! From this section, I will organize the rest according to how I developed. There are numerous other implmenetations for you to try out. So do not narrow down your minds.
 
 ### Implicit-list with-coalesce allocator
-I assume you all agree that for 
+
 
 ### Explicit-list with-coalesce allocator
 
