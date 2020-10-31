@@ -192,10 +192,12 @@ After a second look, we may find out that the footer for allocated blocks are us
   * allocated block (32N)
     * header (wsize) `|size, prev_alloc, is_alloc|`
     * payload (can be larger than 16N)
-  * free block (32)
+    * (padding)
+  * free block (32N)
     * header (wsize) `|size, prev_alloc, is_alloc|`
     * next   (wsize) 
     * prev   (wsize)
+    * padding
     * footer (wsize) `|size, prev_alloc, is_alloc|`
 * block ...
 * epilogue (wsize)
@@ -212,9 +214,15 @@ Well yes, you may see that the not all free blocks need to be recorded as a doub
   * allocated block (32N)
     * header (wsize) `|size, prev_alloc, is_alloc|`
     * payload (can be larger than 16N)
-  * free block (16)
+  * 16B free block (16)
     * header (wsize) `|size, prev_alloc, is_alloc|`
     * next   (wsize)
+  * Normal free block (32N)
+    * header (wsize) `|size, prev_alloc, is_alloc|`
+    * next   (wsize)
+    * prev   (wsize)
+    * padding
+    * footer (wsize) `|size, prev_alloc, is_alloc|`
 * block ...
 * epilogue (wsize)
 
@@ -226,9 +234,15 @@ Instead of traversing the 16B_freeBlock free list to find out whether the previo
   * allocated block (32N)
     * header (wsize) `|size, is_prev_16B_freeBlock, prev_alloc, is_alloc|`
     * payload (can be larger than 16N)
-  * free block (16)
+  * 16B free block (16)
     * header (wsize) `|size, is_prev_16B_freeBlock, prev_alloc, is_alloc|`
     * next   (wsize)
+  * Normal free block (32N)
+    * header (wsize) `|size, is_prev_16B_freeBlock, prev_alloc, is_alloc|`
+    * next   (wsize)
+    * prev   (wsize)
+    * padding
+    * footer (wsize) `|size, is_prev_16B_freeBlock, prev_alloc, is_alloc|`
 * block ...
 * epilogue (wsize)
 
