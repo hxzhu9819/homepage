@@ -1,0 +1,126 @@
+---
+title: "Malloclab Reflections"
+lang: en
+toc: true
+permalink: /posts/malloclab
+tags:
+  - study
+---
+
+# MallocLab - A lab from CMU 18-613
+
+## Before we begin
+The malloc lab is, by far, the most challenging and rewarding lab that I've ever had in CMU18-613. The writeup is 25 pages long, and it took me 5 days to get full mark (100/100.) Mine implementation is not the best (KOPS=9443 and UTIL=74.2%), but it suffices to help me build a solid understanding on this matter. If you, by any chances, are working on the lab with a due date. My suggestion is to sit back, prepare to embrace seg_fault, and have fun. Oh, as always, start early! I finished it 11 days earlier than the due date. Unless you are a genius, do not wait till the last minute. But do not feel discouraged by above descriptions. To be honest, after finishing the lab and looking back, it seems much less difficult than I first read the spec. So, do not be too panic. Following are my reflections on this lab. Feel free to refer to my post, but please hold yourself from conducting AIV. OK! Buckle up and let's get started!
+
+## Short Introduction
+The lab requires us to implement a **dynamic memory allocator**. In English, we need to implement `init`, `malloc`, `free`, `realloc` and `calloc` functions in C. We also need to implement a debug_func called `mm_checkheap`. So on the bright side, we only need to implement 6 functions! Easy, right? 
+~right your head right~. If you are not familiar with linux malloc, my advice for you is to read the manual `man malloc` before you start.
+
+Also, the lab comes with 2 pages of programming rules. Read through them line by line to avoid rewriting your implementation. For your convenience, I've summarized them,
+
+1. Your allocator must not explicitly detect which traces are running. ~(but you can write an adaptive allocator if you have time.)~
+2. You should not change the interface of `mm.h`
+3. global data should sum to at most 128 bytes
+4. You should not write macros that has parameters. eg, `#define GET(p) (*(unsigned int *)(p))`
+5. Your allocator must return pointers that are aligned to 16-byte boundaries
+6. NO AIV, NO warnings. WARNINGS are ERRORS in this course
+
+## Phase 0: Road clearing
+**Caveat: Everything in this phase are for conceptual understanding. In real life and this lab, things are much complicated!**
+
+Hours of thinking can save you from days of debugging. So make sure that you have understood everything before coding. Here, I want to highlight some of the key points that I personally think is of great importance. If you are familiar with the material, feel free to skip this section.
+### Malloc
+Malloc is a function to allocate memory during runtime. It is super useful for data structures whose size are unknown until runtime. The malloced blocks are stored in heap, a segment of memory addressses reserved almost exclusiviely for malloc to use. 
+
+```
+Heap: | prologue | free | d | free | free | e | e | e | ... | epilogue |
+```
+
+Now, assuming byte-addressible, it's easy to explain what `a = malloc(2);` does:
+
+1. Go to the heap
+2. Find 5 consecutive free bytes in the heap (*this is wrong and I will explain why*)
+3. occupy it and let a point to the start of the chosen byte
+
+```
+Heap: | prologue | free | d | a | a | e | e | e | ... | epilogue |
+```
+
+Easy, right? However, this is the abstraction we made for the programmers. There are actually a lot things happening behind the scene. Do not believe me? Try answering the following questions
+
+1. how should we tell whether a block is free or allocated? They are 0/1s, not free/a/b/c/d, ...
+2. how should we find free blocks?
+3. what if we consider the alignment requirement?
+
+Hence, in addition to the spaces that the programmer requests [*payload*], we actually need more space to store some information of the blocks [*overhead*]. The hero behind the scene, `malloc` actually does the three things:
+
+1. organizes all blocks and stores information about them in a structured way
+2. uses the structure made to choose an appropriate location to allocate new memory
+3. updates the structure when the user frees a block of memory
+
+In English, `malloc` is not only a waiter/waitress, it is also a manager.
+
+### Terms I prefer
+* block
+  * free block
+  * allocated block
+* overhead
+  * header
+  * footer
+
+### Implicit-list no-coalesce allocator
+I strongly recommend you to understand the provided implicit-list no-coalesce allocator. Implicit list connects and organizes all blocks and stores information about them in a structured way, typically implemented as a **singly linked list**. To fulfill it, the structure of each component is
+
+* block
+  * free block       `|header|padding|footer|`
+  * allocated block  `|header|payload|(padding)|footer|`
+* overhead
+  * header(wsize)          `|size|is_alloc|`
+  * footer(wsize)           `|size|is_alloc|`
+
+The actually implementaion in the code is a little bit different,
+
+```c
+typedef struct block {
+    /** @brief Header contains size + allocation flag */
+    word_t header;     // the overhead we are talking about
+    char payload[0];   // allocated space to store data given by the programmer
+} block_t;
+```
+
+You may tell that footer excluded form the `struct block`. Hence, the real game is this,
+```
+abstraction:   |         real block            |
+malloc's view: |header|payload+(padding)|footer|
+code's view:   |      block_t           |footer|  
+```
+You can use the provided helper functions to move among header, payload, and footer
+
+**To be continues...**
+Since I have more dues coming, I will jump to the key points. I may update more background info when available.
+
+## Phase 1: Checkpoint
+Welcome to the actual coding part! From this section, I will organize the rest according to how I developed. There are numerous other implmenetations for you to try out. So do not narrow down your minds.
+
+### Implicit-list with-coalesce allocator
+I assume you all agree that for 
+
+### Explicit-list with-coalesce allocator
+
+### Seg-list with-coalesce allocator
+
+### find_fit algorithm
+
+### Parameter tunning
+
+
+
+## Phase 2: Final submission
+
+### Footer-removed Seg-list allocator
+
+### Miniblock Footer-removed Seg-list allocator
+
+### find_fit algorithm
+
+### Parameter tuning
