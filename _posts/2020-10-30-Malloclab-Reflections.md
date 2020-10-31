@@ -215,7 +215,8 @@ Still confused? Here comes an example:
 Say, `malloc(5)`, 
 * without Miniblock, we need to allocate max(roundup(5, dsize), min_block_size=32) = max(16, 32) = 32 bytes. We need 6 Bytes (1 for header and 5 for payload). Thus, 26 bytes are wasted. 
 * with Miniblock, we need to allocate max(roundup(5, dsize), min_block_size=16) = max(16, 16) = 16 bytes. We need 6 Bytes (1 for header and 5 for payload). Thus, 10 bytes are wasted.
-We just saved 16 Bytes for one malloc! That's AWESOME!
+
+We just saved 16 Bytes for one `malloc(5)`! That's AWESOME!
 
 This can be easily achieved with minor modifications.
 * prologue (wsize)
