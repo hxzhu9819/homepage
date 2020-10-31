@@ -52,5 +52,9 @@ Total: 648RMB
 | Cat fence | Avoid Heige from the plants | 97RMB   |  Testing   |
 | Large cat toilet | Literally, cat toilet | 60RMB   |  Testing   |
 | Cat vitamin | Literally, cat vitamin | 26RMB   |  Testing   |
+| Cat litter * 8 | Literally, cat litter  | 249RMB   |  Testing   |
 
-Total: 203RMB
+Total: 452RMB
+
+### September, 2020
+
