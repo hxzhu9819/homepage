@@ -21,7 +21,7 @@ feature_row:
   - image_path: /assets/images/port3-apple.png
     alt: "还是不知道放什么"
     title: "I joined Apple as a Product System Quality Engineer Intern"
-    excerpt: "I delivered my intern presentation to the management team on Sep 30. I am so proud of what we've accomplished in 4 months. Looking forward to getting back."
+    excerpt: "I gave my intern presentation to the management team on Sep 30. I am proud of what we've accomplished in 4 months. Looking forward to getting back."
     # url: "/nowhere/"
     url: "https://www.apple.com/pro-display-xdr/"
     btn_class: "btn--primary"
@@ -36,6 +36,7 @@ feature_row:
 
 ---
 <font size=5>News</font><br>
+**Dec 01, 2020** - Hello Apple, again! I am more than thrilled to be back! <br>
 **Sep 30, 2020** - My internship in Apple finished. It has been a fruitful jouney. Big shout-out to Henry, Jason and Jimmy! <br>
 **Aug 31, 2020** - I attended my first lecture in CMU remotely from Shanghai.<br>
 **Aug 15, 2020** - I graduated from Shanghai Jiao Tong University.<br>

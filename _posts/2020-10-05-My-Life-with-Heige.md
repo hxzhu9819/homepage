@@ -49,12 +49,17 @@ Total: 648RMB
 | Item                          | Effect                             | Cost   | Recommendation |
 |-------------------------------|------------------------------------|--------|----------------|
 | Food bowl (china) | Literally, food bowl | 20RMB   |  5   |
-| Cat fence | Avoid Heige from the plants | 97RMB   |  Testing   |
-| Large cat toilet | Literally, cat toilet | 60RMB   |  Testing   |
-| Cat vitamin | Literally, cat vitamin | 26RMB   |  Testing   |
-| Cat litter * 8 | Literally, cat litter  | 249RMB   |  Testing   |
+| Cat fence | Avoid Heige from the plants | 97RMB   |  0   |
+| Large cat toilet | Literally, cat toilet | 60RMB   |  5   |
+| Cat vitamin | Literally, cat vitamin | 26RMB   |  4  |
+| Cat litter * 8 | Literally, cat litter  | 249RMB   |  5   |
 
 Total: 452RMB
 
-### September, 2020
+### November, 2020
+| Item                          | Effect                             | Cost   | Recommendation |
+|-------------------------------|------------------------------------|--------|----------------|
+| blanket | Shanghai is freezing now | 10RMB   |  0   |
+| Cat food | ACANA 10.8kg + treat + 大宠爱 | 1100RMB   |  5  |
 
+Total: 1110RMB

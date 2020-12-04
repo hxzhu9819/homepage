@@ -36,6 +36,7 @@ Hi guys, my name is Heige (hey gal.) Even though I have no idea why this becomes
 {% include gallery caption="My photo gallery" %}
 
 ### Heige's Diary
+* I want a girlfriend.... G!I!R!L!F!R!I!E!N!D!
 * I just found out that Haoxuan is keeping a budget for me. Check [here](/homepage/posts/heige/)
 * Meow!
 * Haoxuan bought me a cat tree! Amazing!
