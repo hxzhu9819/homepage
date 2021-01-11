@@ -36,6 +36,7 @@ feature_row:
 
 ---
 <font size=5>News</font><br>
+**Jan 01, 2021** - I became an teaching assistant for <a href="http://deeplearning.cs.cmu.edu/S21/index.html">CMU11-785 Introduction to Deep Learning</a>! <br>
 **Dec 01, 2020** - Hello Apple, again! I am more than thrilled to be back! <br>
 **Sep 30, 2020** - My internship in Apple finished. It has been a fruitful jouney. Big shout-out to Henry, Jason and Jimmy! <br>
 **Aug 31, 2020** - I attended my first lecture in CMU remotely from Shanghai.<br>

@@ -18,6 +18,6 @@ During my undergraduate study in computer engineering at the University of Michi
 
 I am also interested in AI, machine learning and computer vision ~~(who aren't....)~~ Please feel free to checkout my side-projects.
 
-In my leasure time, I enjoy playing the piano, and playing Switch, and watching movies. I also happen to know several talented software developers. Click [here](https://syiming.github.io) to **admire** one of them.
+In my leasure time, I enjoy playing the piano, and playing Switch, and watching movies. I also happen to know several talented software developers.
 
 *Last updated: Apr 15, 2020*
